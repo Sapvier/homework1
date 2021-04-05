@@ -1,0 +1,401 @@
+body {
+
+    position: relative;
+    width: 1600px;
+    height: 5870px;
+    background: #FFFFFF;
+}
+
+header {
+    /* header */
+
+    width: 1487px;
+    height: 719px;
+    margin-left: -50px;
+    margin-top: 56px;
+    margin-right: 163px;
+
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: center;
+    width: 1487px;
+    height: 60px;
+}
+
+.logo-block {
+    /* logo */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 160px;
+    height: 41px;
+    margin-left: 240px
+}
+
+.logo-t {
+    /* T */
+
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+    margin: 6px 13px 4px 12px;
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
+
+.logo-ellipse {
+    /* Ellipse 7 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+
+
+    background: #458FF6;
+}
+
+.logo-text {
+    /* Trafalgar */
+
+    margin-left: 12px;
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #233348;
+
+    mix-blend-mode: normal;
+}
+
+.nav {
+    /*Nav block*/
+    display: flex;
+    flex-direction: row;
+    width: 545px;
+    height: 23px;
+    margin-right: 29px;
+    margin-left: 512px;
+
+}
+.nav-item {
+    margin-right: 40px;
+}
+
+a {
+    /* About us */
+    width: 100px;
+    height: 23px;
+    font-family: Mulish, sans-serif;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: none;
+    margin-top: 14px;
+    /* identical to box height */
+
+    /* 1f1534-hyfen */
+    color: #1F1534;
+
+    opacity: 0.5;
+}
+a.home {
+    /* Home */
+    font-weight: bold;
+    opacity: 1;
+
+}
+.header-content {
+    display: flex;
+    flex-direction: row;
+    width: 1487px;
+}
+
+.header-text {
+    margin-left: 240px;
+    margin-top: 227px;
+    width: 445px;
+    height: 338px;
+}
+
+.text-main {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 25px;
+    margin-right: 18px;
+    /* or 117% */
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+}
+.text-description {
+    font-family: Mulish, sans-serif;;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 32px;
+    /* or 152% */
+
+    color: #7D7987;
+
+    mix-blend-mode: normal;
+}
+
+.text-button {
+    background: #458FF6;
+    border-radius: 55px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.text-button-text {
+
+    margin: 3px 40px 1px 40px;
+    font-family: Mulish, sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 60px;
+    /* identical to box height, or 333% */
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
+.header-image {
+
+    width: 693px;
+    height: 598px;
+    margin-left: 109px;
+    margin-top: 84px;
+
+}
+
+/*################## OUR SERVICES ######################*/
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1675.58px;
+    height: 1133px;
+    margin-left: -266px;
+    margin-top: 192px;
+}
+
+.services-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 952px;
+    height: 177px;
+    margin-bottom: 80px;
+    margin-left: 506px;
+}
+.services-main-title {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 56px;
+    margin-bottom: 26px;
+    /* identical to box height, or 156% */
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+}
+.services-main-rectangle {
+    width: 56px;
+    height: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 33px;
+}
+.services-main-text {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+
+    text-align: center;
+
+    color: #7D7987;
+
+    mix-blend-mode: normal;
+
+}
+.services-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 37px;
+    flex-wrap: wrap;
+    width: 1120px;
+    height: 745px;
+    margin-right: 50px;
+    margin-bottom: 69px;
+    margin-left: 506px;
+}
+
+.services-content-container{
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 350px;
+    height: 354px;
+
+    background: #FFFFFF;
+    /* drop shadow */
+
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+    border-radius: 20px;
+}
+.services-content-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 37px;
+}
+.services-content-box-title {
+    position: absolute;
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 56px;
+    bottom: 131px;
+    margin-left: 38px;
+    /* identical to box height, or 233% */
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+}
+.services-content-box-text {
+    position: absolute;
+    margin: 1px 45px 0 39px;
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    top: 223px;
+    /* or 175% */
+
+    color: #7D7987;
+
+    mix-blend-mode: normal;
+}
+.services-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 55px;
+    margin-left: 506px;
+    border: 1.4px solid #458FF6;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #FFFFFF;
+}
+.services-button-text {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 60px;
+    /* identical to box height, or 333% */
+
+    color: #458FF6;
+
+    mix-blend-mode: normal;
+}
+
+/*########################## HEALTHCARE PROVIDERS###################################### */
+.providers-container {
+    display: flex;
+    flex-direction: row;
+    width: 1273px;
+    height: 477px;
+    margin-left: 135px;
+    margin-top: 220px;
+}
+.providers-image {
+    width: 650px;
+    height: 477px;
+}
+.providers-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 142px;
+    margin-top: 57px;
+}
+.providers-textbox-title {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 56px;
+    /* or 156% */
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+}
+.providers-textbox-text  {
+    font-family: Mulish, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+
+    color: #7D7987;
+
+    mix-blend-mode: normal;
+}
+.providers-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 55px;
+    border: 1.4px solid #458FF6;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #FFFFFF;
+}
+.providers-rectangle {
+    width: 56px;
+    height: 2px;
+
+    background: #000000;
+    border-radius: 10px;
+}
