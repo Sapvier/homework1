@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Mulish">
@@ -9,34 +10,45 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
+        <div class="header-container">
             <div class="logo-block">
                 <div class="logo-ellipse">
                     <p class="logo-t">T</p>
                 </div>
                 <h1 class="logo-text">Trafalgar</h1>
             </div>
-            <nav class="nav">
-                    <div class="nav-item"><a class="home" href="#">Home</a></div>
-                    <div class="nav-item"><a class="find" href="#">Find a doctor</a></div>
-                    <div class="nav-item"><a class="apps" href="#">Apps</a></div>
-                    <div class="nav-item"><a class="testimonials" href="#">Testimonials</a></div>
-                    <div><a class="about" href="#">About us</a></div>
+            <nav>
+                <ul class="menu desktop">
+                    <li><a href="" id="home" class="menu__item">Home</a></li>
+                    <li><a href="" class="menu__item">Find a doctor</a></li>
+                    <li><a href="" class="menu__item">Apps</a></li>
+                    <li><a href="" class="menu__item">Testimonials</a></li>
+                    <li><a href="" class="menu__item">About us</a></li>
+                </ul>
+                <a class="menu__icon mobile"><span></span></a>
+                <ul class="menu mobile">
+                    <li><a href="" class="menu__item">Home</a></li>
+                    <li><a href="" class="menu__item">Find a doctor</a></li>
+                    <li><a href="" class="menu__item">Apps</a></li>
+                    <li><a href="" class="menu__item">Testimonials</a></li>
+                    <li><a href="" class="menu__item">About us</a></li>
+                </ul>
             </nav>
         </div>
-        <div class="header-content">
-            <div class="header-text">
+    </header>
+    <section>
+        <div class="hero-container">
+            <div class="hero-text">
                 <p class="text-main">Virtual healthcare for you</p>
                 <p class="text-description">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
                 <button class="text-button">
                     <span class="text-button-text">Consult today</span>
                 </button>
             </div>
-            <div class="header-image">
-                <img src ="assets/trafalgar-header%20illustration%201.svg" alt="illustration"/>
-            </div>
+            <img class="hero-image" src ="assets/trafalgar-header%20illustration%201.svg" alt="illustration"/>
         </div>
-    </header>
+    </section>
+    <section>
     <div class="services-container">
         <div class="services-main">
             <p class="services-main-title">Our services</p>
@@ -44,32 +56,32 @@
             <p class="services-main-text">We provide to you the best choices for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
         </div>
         <div class="services-content">
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/doctor.svg" alt="doctor"/>
                     <h1 class="services-content-box-title">Search doctor</h1>
                     <p class="services-content-box-text">Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
             </div>
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/pharmacy.svg" alt="pharmacy"/>
                     <h1 class="services-content-box-title">Online pharmacy</h1>
                     <p class="services-content-box-text">Buy your medicines with our mobile application with a simple delivery system</p>
             </div>
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/consultation.svg" alt="consultation"/>
                     <h1 class="services-content-box-title">Consultation</h1>
                     <p class="services-content-box-text">Free consultation with our trusted doctors and get the best recommendations</p>
             </div>
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/detail.svg" alt="details"/>
                     <h1 class="services-content-box-title">Details info</h1>
                     <p class="services-content-box-text">Free consultation with our trusted doctors and get the best recommendations</p>
             </div>
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/emergency.svg" alt="emergency"/>
                     <h1 class="services-content-box-title">Emergency care</h1>
                     <p class="services-content-box-text">You can get 24/7 urgent care for yourself or your children and your lovely family</p>
             </div>
-            <div class="services-content-container">
+            <div class="services-content-box">
                     <img class="services-content-image" src="assets/tracking.svg" alt="tracking"/>
                     <h1 class="services-content-box-title">Tracking</h1>
                     <p class="services-content-box-text">Track and save your medical history and health data</p>
@@ -78,133 +90,139 @@
         <button class="services-button">
             <span class="services-button-text">Learn more</span>
         </button>
-    </div>
-    <div class="providers-container">
-        <div class="providers-image">
-            <img src ="assets/trafalgar-illustration-providers.svg" alt="providers"/>
         </div>
-        <div class="providers-textbox">
-            <h1 class="providers-textbox-title">Leading healthcare providers</h1>
-            <div class="providers-rectangle"></div>
-            <p class="providers-textbox-text">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride
-                in the solutions we deliver</p>
-            <button class="providers-button">
-                <span class="services-button-text">Learn more</span>
-            </button>
+    </section>
+    <section>
+        <div class="providers-container">
+            <img class="providers-image" src ="assets/trafalgar-illustration-providers.svg" alt="providers"/>
+            <div class="providers-textbox">
+                <h1 class="providers-textbox-title">Leading healthcare providers</h1>
+                <div class="providers-rectangle"></div>
+                <p class="providers-textbox-text">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride
+                    in the solutions we deliver</p>
+                <button class="providers-button">
+                    <span class="services-button-text">Learn more</span>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="apps-container">
-        <div class="apps-textbox">
-            <h1 class="apps-textbox-title">Download our mobile apps</h1>
-            <div class="apps-rectangle"></div>
-            <p class="apps-textbox-text">Our dedicated patient engagement app and
-                web portal allow you to access information instantaneously (no tedious form, long calls,
-                or administrative hassle) and securely</p>
-            <button class="apps-button">
-                <span class="apps-button-text">Download</span>
-                <img src="assets/pointer%20down.svg" alt="pointer"/>
-            </button>
-        </div>
-        <div class="apps-image">
-            <img src="assets/trafalgar-illustration%20apps.svg" alt="apps image"/>
-        </div>
-    </div>
-    <div class="testimonial-container">
-        <div class="testimonial-textbox">
-            <h1 class="testimonial-textbox-title">What our customer are saying</h1>
-            <div class="testimonial-rectangle"></div>
-            <div class="testimonial-textbox-box">
-                <div class="testimonial-textbox-review">
-                    <div class="testimonial-textbox-image">
-                    </div>
-                    <div class="testimonial-person">
-                        <p class="testimonial-person-name">Edward Newgate</p>
-                        <p class="testimonial-person-title">Founder Circle</p>
-                    </div>
-                </div>
-                <p class="testimonial-textbox-text">“Our dedicated patient engagement app and
+    </section>
+    <section>
+        <div class="apps-container">
+            <div class="apps-textbox">
+                <h1 class="apps-textbox-title">Download our mobile apps</h1>
+                <div class="apps-rectangle"></div>
+                <p class="apps-textbox-text">Our dedicated patient engagement app and
                     web portal allow you to access information instantaneously (no tedious form, long calls,
-                    or administrative hassle) and securely”</p>
+                    or administrative hassle) and securely</p>
+                <button class="apps-button">
+                    <span class="apps-button-text">Download</span>
+                    <img src="assets/pointer%20down.svg" alt="pointer"/>
+                </button>
             </div>
+            <img class="apps-image" src="assets/trafalgar-illustration%20apps.svg" alt="apps image"/>
         </div>
-    </div>
-    <div class="article-container">
-        <h1 class="article-title">Check out our latest article</h1>
-        <div class="article-rectangle"></div>
-        <div class="article-box">
-            <div class="article-box-item">
-                <div class="article-item-image-1"></div>
-                <h1 class="article-item-title">Disease detection, check
-                    up in the laboratory</h1>
-                <p class="article-item-text">In this case, the role of the health laboratory is very important to do
-                    a disease detection...</p>
-                <button class="article-button-more">
-                    <span class="article-button-more-text">Read more</span>
-                    <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
-                </button>
-            </div>
-            <div class="article-box-item">
-                <div class="article-item-image-2"></div>
-                <h1 class="article-item-title">Herbal medicines that are
-                    safe for consumption</h1>
-                <p class="article-item-text">Herbal medicine is very widely used at this time because of its very good for your health...</p>
-                <button class="article-button-more">
-                    <span class="article-button-more-text">Read more</span>
-                    <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
-                </button>
-            </div>
-            <div class="article-box-item">
-                <div class="article-item-image-3"></div>
-                <h1 class="article-item-title">Natural care for healthy
-                    facial skin</h1>
-                <p class="article-item-text">A healthy lifestyle should start from now and also for your skin health.
-                    There are some...</p>
-                <button class="article-button-more">
-                    <span class="article-button-more-text">Read more</span>
-                    <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
-                </button>
-            </div>
-        </div>
-        <button class="article-button">
-            <span class="article-button-text">View all</span>
-        </button>
-    </div>
-    <footer class="footer-container">
-        <div class="footer-info">
-            <div class="footer-logo-block">
-                <div class="footer-logo">
-                    <p class="footer-logo-t">T</p>
+    </section>
+    <section>
+        <div class="testimonial-container">
+            <div class="testimonial-textbox">
+                <h1 class="testimonial-textbox-title">What our customer are saying</h1>
+                <div class="testimonial-rectangle"></div>
+                <div class="testimonial-textbox-box">
+                    <div class="testimonial-textbox-review">
+                        <div class="testimonial-textbox-image">
+                        </div>
+                        <div class="testimonial-person">
+                            <p class="testimonial-person-name">Edward Newgate</p>
+                            <p class="testimonial-person-title">Founder Circle</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-textbox-text">“Our dedicated patient engagement app and
+                        web portal allow you to access information instantaneously (no tedious form, long calls,
+                        or administrative hassle) and securely”</p>
                 </div>
-                <h1 class="footer-company-name">Trafalgar</h1>
-            </div>
-            <p class="footer-company-text">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online
-                for everyone</p>
-            <p class="footer-company-copyright">©Trafalgar PTY LTD 2020. All rights reserved</p>
-        </div>
-        <div class="footer-nav">
-            <div class="footer-nav-company">
-                <p class="footer-nav-title">Company</p>
-                <p class="footer-nav-item">About</p>
-                <p class="footer-nav-item">Testimonials</p>
-                <p class="footer-nav-item">Find a doctor</p>
-                <p class="footer-nav-item">Apps</p>
-            </div>
-            <div class="footer-nav-region">
-                <p class="footer-nav-title">Region</p>
-                <p class="footer-nav-item">Indonesia</p>
-                <p class="footer-nav-item">Singapore</p>
-                <p class="footer-nav-item">Hongkong</p>
-                <p class="footer-nav-item">Canada</p>
-            </div>
-            <div class="footer-nav-help">
-                <p class="footer-nav-title">Help</p>
-                <p class="footer-nav-item">Help center</p>
-                <p class="footer-nav-item">Contact support</p>
-                <p class="footer-nav-item">Instructions</p>
-                <p class="footer-nav-item">How it works</p>
             </div>
         </div>
-
+    </section>
+    <section>
+        <div class="article-container">
+            <h1 class="article-title">Check out our latest article</h1>
+            <div class="article-rectangle"></div>
+            <div class="article-box">
+                <div class="article-box-item">
+                    <div class="article-item-image-1"></div>
+                    <h1 class="article-item-title">Disease detection, check
+                        up in the laboratory</h1>
+                    <p class="article-item-text">In this case, the role of the health laboratory is very important to do
+                        a disease detection...</p>
+                    <button class="article-button-more">
+                        <span class="article-button-more-text">Read more</span>
+                        <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
+                    </button>
+                </div>
+                <div class="article-box-item">
+                    <div class="article-item-image-2"></div>
+                    <h1 class="article-item-title">Herbal medicines that are
+                        safe for consumption</h1>
+                    <p class="article-item-text">Herbal medicine is very widely used at this time because of its very good for your health...</p>
+                    <button class="article-button-more">
+                        <span class="article-button-more-text">Read more</span>
+                        <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
+                    </button>
+                </div>
+                <div class="article-box-item">
+                    <div class="article-item-image-3"></div>
+                    <h1 class="article-item-title">Natural care for healthy
+                        facial skin</h1>
+                    <p class="article-item-text">A healthy lifestyle should start from now and also for your skin health.
+                        There are some...</p>
+                    <button class="article-button-more">
+                        <span class="article-button-more-text">Read more</span>
+                        <img class="pointer-right" src="assets/pointer_right.svg" alt="pointer-right"/>
+                    </button>
+                </div>
+            </div>
+            <button class="article-button">
+                <span class="article-button-text">View all</span>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo-block">
+                    <div class="footer-logo">
+                        <p class="footer-logo-t">T</p>
+                    </div>
+                    <h1 class="footer-company-name">Trafalgar</h1>
+                </div>
+                <p class="footer-company-text">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online
+                    for everyone</p>
+                <p class="footer-company-copyright">©Trafalgar PTY LTD 2020. All rights reserved</p>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-block">
+                    <p class="footer-nav-title">Company</p>
+                    <p class="footer-nav-item">About</p>
+                    <p class="footer-nav-item">Testimonials</p>
+                    <p class="footer-nav-item">Find a doctor</p>
+                    <p class="footer-nav-item">Apps</p>
+                </div>
+                <div class="footer-nav-block">
+                    <p class="footer-nav-title">Region</p>
+                    <p class="footer-nav-item">Indonesia</p>
+                    <p class="footer-nav-item">Singapore</p>
+                    <p class="footer-nav-item">Hongkong</p>
+                    <p class="footer-nav-item">Canada</p>
+                </div>
+                <div class="footer-nav-block">
+                    <p class="footer-nav-title">Help</p>
+                    <p class="footer-nav-item">Help center</p>
+                    <p class="footer-nav-item">Contact support</p>
+                    <p class="footer-nav-item">Instructions</p>
+                    <p class="footer-nav-item">How it works</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
