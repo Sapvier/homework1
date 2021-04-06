@@ -1,11 +1,13 @@
 body {
-    width: 1600px;
-    height: 5870px;
-    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    width: 1487px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1487px;
     height: 719px;
     margin-left: -50px;
     margin-top: 56px;
@@ -19,8 +21,6 @@ header {
     justify-content: space-between;
     align-self: flex-start;
     align-items: center;
-    width: 1487px;
-    height: 60px;
 }
 
 .logo-block {
@@ -106,7 +106,6 @@ a.home {
 .header-content {
     display: flex;
     flex-direction: row;
-    width: 1487px;
 }
 
 .header-text {
@@ -180,7 +179,7 @@ a.home {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 1675.58px;
+    max-width: 1675.58px;
     height: 1133px;
     margin-left: -266px;
     margin-top: 190px;
@@ -321,7 +320,7 @@ a.home {
 .providers-container {
     display: flex;
     flex-direction: row;
-    width: 1273px;
+    max-width: 1273px;
     height: 477px;
     margin-left: 135px;
     margin-top: 220px;
@@ -396,7 +395,7 @@ a.home {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    width: 1365px;
+    max-width: 1365px;
     height: 675px;
     margin-left: 280px;
     margin-top: -12px;
@@ -481,7 +480,7 @@ a.home {
 .testimonial-container{
     display: flex;
     justify-content: center;
-    width: 1219.58px;
+    max-width: 1219.58px;
     height: 502px;
     margin-top: 251px;
     margin-left: 190px;
@@ -602,7 +601,7 @@ a.home {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 1600px;
+    max-width: 1600px;
     height: 810px;
     margin-top: 216px;
 
@@ -624,7 +623,7 @@ a.home {
     display: flex;
     flex-direction: row;
     column-gap: 34px;
-    width: 1118px;
+    max-width: 1118px;
     height: 512px;
 
 }
@@ -762,7 +761,7 @@ a.home {
 
 .footer-container {
     position: absolute;
-    width: 1600px;
+    width: 100%;
     height: 432px;
     left: 0;
     top: 5438px;
