@@ -1039,7 +1039,7 @@ a.menu__item#home {
         text-align: center;
     }
     .services-main {
-        align-items: flex-start;
+        align-items: center;
     }
     .services-main-text {
         text-align: left;
