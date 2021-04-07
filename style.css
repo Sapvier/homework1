@@ -137,6 +137,9 @@ a.menu__item#home {
 }
 
 .text-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 200px;
     background: #458FF6;
     border-radius: 55px;
@@ -147,8 +150,6 @@ a.menu__item#home {
 }
 
 .text-button-text {
-
-    margin: 3px 40px 1px 40px;
     font-family: Mulish, sans-serif;;
     font-style: normal;
     font-weight: bold;
