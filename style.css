@@ -112,7 +112,7 @@ a.menu__item#home {
 
 .hero-text {
     max-width: 445px;
-    padding: 20px;
+    padding-right: 20px;
 }
 
 
@@ -237,6 +237,7 @@ a.menu__item#home {
     justify-content: space-evenly;
     align-items: flex-start;
     max-width: 300px;
+    min-height: 350px;
     padding: 20px;
 
     background: #FFFFFF;
@@ -315,7 +316,6 @@ a.menu__item#home {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 30px;
 
 }
 
@@ -384,7 +384,6 @@ a.menu__item#home {
     justify-content: space-between;
     align-items: flex-start;
     max-width: 420px;
-    padding: 30px;
 
 }
 
@@ -467,8 +466,8 @@ a.menu__item#home {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    padding: 10px;
+    width: 95%;
+    padding: 5px;
 
     background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
     border-radius: 24px;
@@ -993,13 +992,20 @@ a.menu__item#home {
         flex-direction: column;
         flex-wrap: wrap;
     }
+    .services-container {
+        padding: 0 15px;
+    }
 
     .providers-container {
         padding: 0 15px;
         flex-direction: column;
     }
+    .testimonial-container {
+        padding: 0 5px;
+    }
 
     .apps-container {
+        padding: 0 15px;
         flex-direction: column-reverse;
     }
 
@@ -1026,9 +1032,6 @@ a.menu__item#home {
     .apps-image {
         width: 60%;
         margin-bottom: 40px;
-    }
-    .testimonial-rectangle {
-        margin-bottom: 20px;
     }
     .footer-nav {
         margin-bottom: 55px;
@@ -1077,6 +1080,7 @@ a.menu__item#home {
     .apps-image {
         width: 50%;
     }
+
     .testimonial-textbox-review {
         flex-direction: column;
     }
@@ -1086,8 +1090,14 @@ a.menu__item#home {
     .article-box {
         row-gap: 20px;
     }
+    .providers-textbox {
+        padding-left: 20px;
+    }
 }
 @media (max-width: 480px) {
+    .hero-text {
+        padding-right: 0;
+    }
     .hero-image {
         width: 100%;
     }
@@ -1096,5 +1106,14 @@ a.menu__item#home {
     }
     .apps-image {
         width: 100%;
+    }
+    .footer-nav-item {
+        font-size: 0.8em;
+    }
+    .footer-nav-title {
+        font-size: 0.8em;
+    }
+    .providers-textbox {
+        padding-left: 0;
     }
 }
