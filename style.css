@@ -103,14 +103,13 @@ a.menu__item#home {
     justify-content: space-between;
     max-width: 1350px;
     margin: 0 auto 120px auto;
-    height: 600px;
     padding: 0 30px;
 
 }
 
 .hero-text {
-    width: 445px;
-    height: 338px;
+    max-width: 445px;
+
 }
 
 
