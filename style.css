@@ -867,7 +867,7 @@ a.menu__item#home {
 }
 
 
-@media only screen and (max-width: 812px) {
+@media (max-width: 812px) {
     a {
         cursor: pointer;
         font-family: Mulish, sans-serif;
@@ -894,7 +894,7 @@ a.menu__item#home {
         width: 43px;
         margin: 3%;
         position: absolute;
-        top: 5px;
+        top: 12px;
         right: 3%;
         display: inline-block;
         vertical-align: middle;
