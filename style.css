@@ -576,6 +576,7 @@ a.menu__item#home {
     justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto 150px auto;
+    padding: 0 30px;
 
 }
 
@@ -822,7 +823,7 @@ a.menu__item#home {
 }
 
 .footer-nav {
-    min-width: 600px;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -830,11 +831,12 @@ a.menu__item#home {
     margin-bottom: 20px;
 }
 .footer-nav-block {
-    min-width: 170px;
+    max-width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-right: 10px;
 
 }
 
@@ -1023,5 +1025,26 @@ a.menu__item#home {
     }
     .footer-nav {
         margin-bottom: 55px;
+    }
+    .article-title {
+        text-align: center;
+    }
+    .testimonial-textbox-title {
+        text-align: center;
+    }
+    .testimonial-textbox-box {
+        padding: 0 10px;
+    }
+    .testimonial-textbox-text {
+        text-align: center;
+    }
+    .services-main {
+        align-items: flex-start;
+    }
+    .services-main-text {
+        text-align: left;
+    }
+    .testimonial-textbox-review {
+        flex-direction: column;
     }
 }
