@@ -54,6 +54,7 @@ export class DomSearch{
             }
             this.onSearch()
             this.result.style.border = '1px solid red'
+            this.result.scrollIntoView({behavior: 'smooth'});
         })
 
         this.downButton.addEventListener('click', (e) => {
@@ -71,7 +72,7 @@ export class DomSearch{
             else e.preventDefault()
             this.onSearch()
             this.result.style.border = '1px solid red'
-
+            this.result.scrollIntoView({behavior: 'smooth'});
         })
 
         this.upButton.addEventListener('click', (e) => {
@@ -88,6 +89,7 @@ export class DomSearch{
             else e.preventDefault()
             this.onSearch()
             this.result.style.border = '1px solid red'
+            this.result.scrollIntoView({behavior: 'smooth'});
         })
 
         this.leftButton.addEventListener('click', (e) => {
@@ -106,6 +108,7 @@ export class DomSearch{
             }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
+            this.result.scrollIntoView({behavior: 'smooth'});
         })
 
         this.rightButton.addEventListener('click', (e) => {
@@ -125,6 +128,7 @@ export class DomSearch{
             }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
+            this.result.scrollIntoView({behavior: 'smooth'});
         })
     }
 
