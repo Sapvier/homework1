@@ -50,8 +50,9 @@ export class DomSearch{
                 this.result = document.querySelectorAll(`${input.value}`)[i++]
             }
             this.onSearch()
-            this.onSearchModalAndScripts()
+            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
+            console.log(this.result, this.result.parentElement)
 
         })
 
@@ -59,22 +60,39 @@ export class DomSearch{
             e.preventDefault()
             this.result.removeAttribute('style')
             this.result = this.result.firstElementChild
-            if (this.result === document.getElementById('search-modal')) {
+
+            if (this.result.className.includes('search')) {
                 this.result = this.result.nextElementSibling
+                if (this.result.className.includes('search')) {
+                    this.result = this.result.nextElementSibling
+                }
+
             }
             else e.preventDefault()
             this.onSearch()
-            this.onSearchModalAndScripts()
+            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
+            console.log(this.result, this.result.parentElement)
         })
 
         this.upButton.addEventListener('click', (e) => {
             e.preventDefault()
             this.result.removeAttribute('style')
             this.result = this.result.parentElement
+
+            if (this.result.className.includes('search')) {
+                this.result = this.result.nextElementSibling
+                if (this.result.className.includes('search')) {
+                    this.result = this.result.nextElementSibling
+                }
+
+            }
+            else e.preventDefault()
+
             this.onSearch()
-            this.onSearchModalAndScripts()
+            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
+            console.log(this.result, this.result.parentElement)
         })
 
         this.leftButton.addEventListener('click', (e) => {
@@ -82,12 +100,19 @@ export class DomSearch{
             this.result.removeAttribute('style')
             this.result = this.result.previousElementSibling
             this.onSearch()
-            this.onSearchModalAndScripts()
+            // this.onSearchModalAndScripts()
             if (this.result.parentElement === document.body && this.result.previousElementSibling.tagName === 'SCRIPT') {
                 this.leftButton.disabled = true
             }
+            else if (this.result.className.includes('search')) {
+                this.result = this.result.nextElementSibling
+                if (this.result.className.includes('search')) {
+                    this.result = this.result.nextElementSibling
+                }
+            }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
+            console.log(this.result, this.result.parentElement)
         })
 
         this.rightButton.addEventListener('click', (e) => {
@@ -95,12 +120,19 @@ export class DomSearch{
             this.result.removeAttribute('style')
             this.result = this.result.nextElementSibling
             this.onSearch()
-            this.onSearchModalAndScripts()
             if (this.result.parentElement === document.body && this.result.nextElementSibling.tagName === 'SCRIPT') {
                 this.rightButton.disabled = true
             }
+            else if (this.result.className.includes('search')) {
+                this.result = this.result.nextElementSibling
+                if (this.result.className.includes('search')) {
+                    this.result = this.result.nextElementSibling
+                }
+
+            }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
+            console.log(this.result, this.result.parentElement)
         })
     }
 
