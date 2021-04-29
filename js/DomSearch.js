@@ -38,6 +38,9 @@ export class DomSearch{
             let i = 0
             let classSel = '.'
             let idSel = '#'
+            if (this.result) {
+                this.result.removeAttribute('style')
+            }
             this.result = document.querySelectorAll(`${input.value}`)[i]
 
             if (this.result === undefined) {
@@ -50,10 +53,7 @@ export class DomSearch{
                 this.result = document.querySelectorAll(`${input.value}`)[i++]
             }
             this.onSearch()
-            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
-            console.log(this.result, this.result.parentElement)
-
         })
 
         this.downButton.addEventListener('click', (e) => {
@@ -70,9 +70,8 @@ export class DomSearch{
             }
             else e.preventDefault()
             this.onSearch()
-            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
-            console.log(this.result, this.result.parentElement)
+
         })
 
         this.upButton.addEventListener('click', (e) => {
@@ -85,14 +84,10 @@ export class DomSearch{
                 if (this.result.className.includes('search')) {
                     this.result = this.result.nextElementSibling
                 }
-
             }
             else e.preventDefault()
-
             this.onSearch()
-            // this.onSearchModalAndScripts()
             this.result.style.border = '1px solid red'
-            console.log(this.result, this.result.parentElement)
         })
 
         this.leftButton.addEventListener('click', (e) => {
@@ -100,7 +95,6 @@ export class DomSearch{
             this.result.removeAttribute('style')
             this.result = this.result.previousElementSibling
             this.onSearch()
-            // this.onSearchModalAndScripts()
             if (this.result.parentElement === document.body && this.result.previousElementSibling.tagName === 'SCRIPT') {
                 this.leftButton.disabled = true
             }
@@ -112,7 +106,6 @@ export class DomSearch{
             }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
-            console.log(this.result, this.result.parentElement)
         })
 
         this.rightButton.addEventListener('click', (e) => {
@@ -132,7 +125,6 @@ export class DomSearch{
             }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
-            console.log(this.result, this.result.parentElement)
         })
     }
 
@@ -141,12 +133,6 @@ export class DomSearch{
         this.result.firstElementChild === null ? this.downButton.disabled = true : this.downButton.disabled = false
         this.result.previousElementSibling === null ? this.leftButton.disabled = true : this.leftButton.disabled = false
         this.result.nextElementSibling === null ? this.rightButton.disabled = true : this.rightButton.disabled = false
-    }
-
-    onSearchModalAndScripts() {
-        this.result.previousElementSibling === document.getElementById('search-modal')
-            ? this.leftButton.disabled = true
-            : this.leftButton.disabled = false
     }
 
     dragAndDrop() {
