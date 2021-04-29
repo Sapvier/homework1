@@ -12,11 +12,11 @@ export class DomSearch{
         deleteButton.onclick = (e) => {
             e.preventDefault()
             input.value = ''
+            if (this.result) this.result.removeAttribute('style')
+            this.result = null
         }
-        if (this.result) this.result.removeAttribute('style')
-
-
     }
+
     openModal() {
         let icon = document.querySelector('.search-icon')
         let modal = document.querySelector('.search-modal')
@@ -56,11 +56,12 @@ export class DomSearch{
             this.onSearch()
             this.result.style.border = '1px solid red'
             this.result.scrollIntoView({behavior: 'smooth'});
+            console.log(this.result)
         })
 
         this.downButton.addEventListener('click', (e) => {
             e.preventDefault()
-            this.result.removeAttribute('style')
+            if (this.result) this.result.removeAttribute('style')
             this.result = this.result.firstElementChild
 
             if (this.result.className.includes('search')) {
@@ -78,7 +79,7 @@ export class DomSearch{
 
         this.upButton.addEventListener('click', (e) => {
             e.preventDefault()
-            this.result.removeAttribute('style')
+            if (this.result) this.result.removeAttribute('style')
             this.result = this.result.parentElement
 
             if (this.result.className.includes('search')) {
@@ -95,7 +96,7 @@ export class DomSearch{
 
         this.leftButton.addEventListener('click', (e) => {
             e.preventDefault()
-            this.result.removeAttribute('style')
+            if (this.result) this.result.removeAttribute('style')
             this.result = this.result.previousElementSibling
             this.onSearch()
             if (this.result.parentElement === document.body && this.result.previousElementSibling.tagName === 'SCRIPT') {
@@ -114,7 +115,7 @@ export class DomSearch{
 
         this.rightButton.addEventListener('click', (e) => {
             e.preventDefault()
-            this.result.removeAttribute('style')
+            if (this.result) this.result.removeAttribute('style')
             this.result = this.result.nextElementSibling
             this.onSearch()
             if (this.result.parentElement === document.body && this.result.nextElementSibling.tagName === 'SCRIPT') {
