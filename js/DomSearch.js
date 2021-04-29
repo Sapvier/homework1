@@ -1,4 +1,15 @@
-export class DomSearch{
+export class DomSearch {
+
+    input = document.getElementById('search-request')
+    searchButton = document.querySelector(".search-button")
+    downButton = document.querySelector(".search-down-button")
+    upButton = document.querySelector(".search-up-button")
+    leftButton = document.querySelector(".search-left-button")
+    rightButton = document.querySelector(".search-right-button")
+    icon = document.querySelector('.search-icon')
+    modal = document.querySelector('.search-modal')
+    deleteButton = document.querySelector(".search-button-clear")
+
     initialize() {
         this.openModal()
         this.clearInput()
@@ -7,56 +18,43 @@ export class DomSearch{
     }
 
     clearInput() {
-        let input = document.getElementById('search-request')
-        let deleteButton = document.querySelector(".search-button-clear")
-        deleteButton.onclick = (e) => {
+        this.deleteButton.onclick = (e) => {
             e.preventDefault()
-            input.value = ''
+            this.input.value = ''
             if (this.result) this.result.removeAttribute('style')
             this.result = null
         }
     }
 
     openModal() {
-        let icon = document.querySelector('.search-icon')
-        let modal = document.querySelector('.search-modal')
-        icon.addEventListener('click', (e) => {
+        this.icon.addEventListener('click', (e) => {
             e.preventDefault()
-            icon.style.display = 'none'
-            modal.classList.remove('modal-hide')
+            this.icon.style.display = 'none'
+            this.modal.classList.remove('modal-hide')
         })
-
     }
 
     searchHandler() {
-        let input = document.getElementById('search-request')
-        this.searchButton = document.querySelector(".search-button")
-        this.downButton = document.querySelector(".search-down-button")
-        this.upButton = document.querySelector(".search-up-button")
-        this.leftButton = document.querySelector(".search-left-button")
-        this.rightButton = document.querySelector(".search-right-button")
-
-        this.searchButton.addEventListener('click', (e) => {
+            this.searchButton.addEventListener('click', (e) => {
             e.preventDefault()
             let i = 0
             let classSel = '.'
             let idSel = '#'
             if (this.result) this.result.removeAttribute('style')
-            this.result = document.querySelectorAll(`${input.value}`)[i]
+            this.result = document.querySelectorAll(`${this.input.value}`)[i]
 
             if (this.result === undefined) {
-                this.result = document.querySelectorAll(`${classSel + input.value}`)[i]
+                this.result = document.querySelectorAll(`${classSel + this.input.value}`)[i]
                 if(this.result === undefined) {
-                    this.result = document.querySelectorAll(`${idSel + input.value}`)[i]
+                    this.result = document.querySelectorAll(`${idSel + this.input.value}`)[i]
                 }
             }
             while (this.result.className.includes('search')) {
-                this.result = document.querySelectorAll(`${input.value}`)[i++]
+                this.result = document.querySelectorAll(`${this.input.value}`)[i++]
             }
             this.onSearch()
             this.result.style.border = '1px solid red'
             this.result.scrollIntoView({behavior: 'smooth'});
-            console.log(this.result)
         })
 
         this.downButton.addEventListener('click', (e) => {
@@ -69,7 +67,6 @@ export class DomSearch{
                 if (this.result.className.includes('search')) {
                     this.result = this.result.nextElementSibling
                 }
-
             }
             else e.preventDefault()
             this.onSearch()
@@ -126,7 +123,6 @@ export class DomSearch{
                 if (this.result.className.includes('search')) {
                     this.result = this.result.nextElementSibling
                 }
-
             }
             else e.preventDefault()
             this.result.style.border = '1px solid red'
@@ -142,8 +138,8 @@ export class DomSearch{
     }
 
     dragAndDrop() {
-        let modal = document.getElementById("search-modal");
-        let input = document.querySelector(".search-input");
+        let modal = this.modal
+        let input = this.input
 
         function mouseDownHandler (e) {
             this.x = e.clientX;
