@@ -13,6 +13,9 @@ export class DomSearch{
             e.preventDefault()
             input.value = ''
         }
+        if (this.result) this.result.removeAttribute('style')
+
+
     }
     openModal() {
         let icon = document.querySelector('.search-icon')
@@ -38,9 +41,7 @@ export class DomSearch{
             let i = 0
             let classSel = '.'
             let idSel = '#'
-            if (this.result) {
-                this.result.removeAttribute('style')
-            }
+            if (this.result) this.result.removeAttribute('style')
             this.result = document.querySelectorAll(`${input.value}`)[i]
 
             if (this.result === undefined) {
